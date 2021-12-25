@@ -1,0 +1,15 @@
+<div>
+    <button id='screenshot-button'>Click me</button>
+    <img id="screenshot-image" />
+</div>
+
+<script>
+    const { desktopCapturer } = require('electron');
+
+    document.getElementById('screenshot-button').addEventListener('click', () => { // The button which takes the screenshot
+        desktopCapturer.getSources({ types: ['screen'] })
+            .then( sources => {
+                document.getElementById('screenshot-image').src = sources[0].thumbnail.toDataURL() // The image to display the screenshot
+            })
+    })
+</script>

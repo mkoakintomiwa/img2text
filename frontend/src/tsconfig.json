@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "typeRoots": ["global.d.ts"],
+        "jsx": "react-jsx",
+        "lib": ["ES2016","DOM"]
+    }
+}
